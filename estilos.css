@@ -1,0 +1,91 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Caja genérica */
+.box {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Encabezado */
+.header {
+  text-align: center;
+  background-color: #ffe0b2;
+  border-color: #ff9800;
+}
+
+/* Navegación */
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #d84315;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Imagen principal */
+.image-section {
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Secciones */
+.section h2 {
+  margin-bottom: 10px;
+  color: #4e342e;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+/* Formulario */
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.form input[type="submit"] {
+  background-color: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #e65100;
+}
+
+/* Pie de página */
+.footer {
+  text-align: center;
+  font-style: italic;
+  background-color: #e0e0e0;
+}
