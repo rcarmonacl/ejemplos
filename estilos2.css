@@ -143,3 +143,47 @@ h1 {
     height: auto;
   }
 }
+.preparacion-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.preparacion-contenido {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.img-preparacion {
+  width: 250px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.img-preparacion:hover {
+  transform: scale(1.05);
+}
+
+.preparacion-contenido ol {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .preparacion-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preparacion-contenido ol {
+    margin-left: 0;
+  }
+
+  .img-preparacion {
+    width: 100%;
+  }
+}
