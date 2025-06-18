@@ -94,19 +94,40 @@ h1 {
   transform: scale(1.05);
 }
 
-.form input, .form textarea, .form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  margin-bottom: 15px;
-  border: 1px solid #bbb;
-  border-radius: 6px;
+/* Estilo general para la sección del formulario */
+#contacto {
+  background-color: #fff3e0; /* color cálido suave */
+  border: 2px solid #ffcc80;
 }
 
+/* Estilo para etiquetas del formulario */
+.form label {
+  display: block;
+  font-weight: bold;
+  color: #5d4037;
+  margin-top: 10px;
+}
+
+/* Input, textarea y select con fondo claro */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  background-color: #fff8e1;
+  border: 1px solid #ffb74d;
+  padding: 10px;
+  border-radius: 6px;
+  color: #4e342e;
+}
+
+/* Botón de enviar con colores vivos */
 .form input[type="submit"] {
   background-color: #ff9800;
   color: white;
   font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
