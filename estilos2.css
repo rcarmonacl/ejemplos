@@ -112,8 +112,8 @@ h1 {
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-  background-color: #fff8e1;
-  border: 1px solid #ffb74d;
+  background-color: #fce4ec;
+  border: 1px solid #f06292;
   padding: 10px;
   border-radius: 6px;
   color: #4e342e;
