@@ -1,0 +1,13 @@
+/* Aplica a todos los elementos del documento */
+* {
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho y alto total del elemento */
+}
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente legible y moderna */
+  background-color: #fff8f0; /* Fondo color crema claro */
+  padding: 20px; /* Espacio interno alrededor del contenido */
+  color: #333; /* Texto en gris oscuro para buena legibilidad */
+}
