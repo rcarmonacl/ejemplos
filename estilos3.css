@@ -11,3 +11,8 @@ body {
   padding: 20px; /* Espacio interno alrededor del contenido */
   color: #333; /* Texto en gris oscuro para buena legibilidad */
 }
+/* Logo de la cabecera */
+.logo {
+  width: 50px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
+}
