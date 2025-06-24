@@ -11,6 +11,24 @@ body {
   padding: 20px; /* Espacio interno alrededor del contenido */
   color: #333; /* Texto en gris oscuro para buena legibilidad */
 }
+/* Clase genérica para contener bloques con estilo uniforme */
+.box {
+  margin: 20px auto; /* Margen superior/inferior y centrado horizontal */
+  padding: 20px; /* Espacio interior */
+  max-width: 900px; /* Ancho máximo */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 10px; /* Esquinas redondeadas */
+  background-color: white; /* Fondo blanco */
+}
+/* Cabecera del sitio */
+.header {
+  display: flex; /* Usa modelo flexbox para disposición horizontal */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+  gap: 15px; /* Espacio entre los elementos */
+  background-color: #ffe0b2; /* Fondo color durazno claro */
+  border-color: #ffb74d; /* Borde más oscuro en el mismo tono */
+  flex-wrap: wrap; /* Permite que los elementos pasen a otra línea si no caben */
+}
 /* Logo de la cabecera */
 .logo {
   width: 50px; /* Ancho fijo */
