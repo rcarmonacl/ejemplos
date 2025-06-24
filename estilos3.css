@@ -58,3 +58,13 @@ h1 {
   text-decoration: underline; /* Subrayado al pasar el mouse */
   color: #bf360c; /* Color más oscuro */
 }
+/* Sección para mostrar una imagen centrada */
+.image-section {
+  text-align: center; /* Centra el contenido */
+}
+/* Imagen principal */
+.main-image {
+  width: 100%; /* Ocupar todo el ancho disponible */
+  height: auto; /* Ajustar altura proporcional */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
