@@ -68,3 +68,34 @@ h1 {
   height: auto; /* Ajustar altura proporcional */
   border-radius: 10px; /* Esquinas redondeadas */
 }
+/* Títulos secundarios dentro de una sección */
+.section h2 {
+  margin-bottom: 10px; /* Espacio inferior */
+  color: #4e342e; /* Color marrón oscuro */
+}
+
+/* Contenedor de ingredientes con disposición flexible */
+.ingredientes-container {
+  display: flex; /* Layout flexible */
+  flex-wrap: wrap; /* Permite que el contenido se ajuste en varias líneas */
+  gap: 20px; /* Espacio entre elementos */
+  align-items: center; /* Centrado vertical */
+}
+
+/* Lista de ingredientes */
+.ingredientes-container ul {
+  flex: 1; /* Ocupa espacio proporcional */
+  margin-left: 20px; /* Separación a la izquierda */
+}
+
+/* Imagen de un ingrediente */
+.ingrediente-img {
+  width: 200px; /* Ancho fijo */
+  border-radius: 10px; /* Esquinas redondeadas */
+  transition: transform 0.3s; /* Suaviza la animación */
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.ingrediente-img:hover {
+  transform: scale(1.05); /* Agranda la imagen ligeramente */
+}
