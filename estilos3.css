@@ -11,6 +11,7 @@ body {
   background-color: #fff8f0; /* Fondo color crema claro */
   padding: 20px; /* Espacio interno alrededor del contenido */
   color: #333; /* Texto en gris oscuro para buena legibilidad */
+  font-size: 20px;
 }
 
 /* Clase genérica para contener bloques con estilo uniforme */
@@ -42,7 +43,7 @@ body {
 /* Título principal */
 h1 {
   flex-grow: 1; /* Ocupa todo el espacio disponible restante */
-  font-size: 2rem; /* Tamaño grande */
+  font-size: 3rem; /* Tamaño grande */
   color: #bf360c; /* Color naranjo oscuro */
 }
 
