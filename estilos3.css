@@ -99,3 +99,51 @@ h1 {
 .ingrediente-img:hover {
   transform: scale(1.05); /* Agranda la imagen ligeramente */
 }
+/* Sección de preparación */
+.preparacion-section {
+  display: flex;
+  flex-direction: column; /* Disposición vertical */
+}
+
+/* Contenedor del contenido de preparación */
+.preparacion-contenido {
+  display: flex; /* Disposición flexible horizontal */
+  gap: 20px; /* Espacio entre elementos */
+  align-items: flex-start; /* Alineación superior */
+  flex-wrap: wrap; /* Permite el salto de línea */
+  margin-top: 15px; /* Separación superior */
+}
+
+/* Imagen de preparación */
+.img-preparacion {
+  width: 250px; /* Ancho fijo */
+  border-radius: 10px; /* Bordes redondeados */
+  flex-shrink: 0; /* No se reduce si falta espacio */
+  transition: transform 0.3s ease; /* Suaviza animación */
+}
+
+.img-preparacion:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Lista ordenada dentro de la preparación */
+.preparacion-contenido ol {
+  flex: 1; /* Toma el espacio restante */
+  margin-left: 10px; /* Separación izquierda */
+}
+
+/* Estilos responsivos para la sección de preparación */
+@media (max-width: 768px) {
+  .preparacion-contenido {
+    flex-direction: column; /* Disposición vertical */
+    align-items: center; /* Centrado */
+  }
+
+  .preparacion-contenido ol {
+    margin-left: 0; /* Elimina margen izquierdo */
+  }
+
+  .img-preparacion {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+}
