@@ -33,12 +33,71 @@
   <main class="box main">
   <!-- SECCIÓN DE IMAGEN PRINCIPAL -->
     <section class="box image-section">
+      <!-- Imagen ilustrativa de los panqueques -->
       <img src="https://cocina-casera.com/wp-content/uploads/2015/10/como-hacer-masa-panqueques.jpg"
            alt="Panqueques caseros"
            class="main-image"
            title="¡Mira esos panqueques!">
-      <!-- Imagen ilustrativa de los panqueques -->
+    </section>
+  <!-- SECCIÓN DE INGREDIENTES -->
+    <section class="box section" id="ingredientes">
+      <h2>Ingredientes</h2>
+    <!-- Título de la sección -->
+<label for="personas">¿Para cuántas personas?</label>
+      <!-- Etiqueta para el selector -->
+      <select id="personas" onchange="ajustarIngredientes()">
+        <!-- Selector para elegir cantidad de personas, que ajustará los ingredientes dinámicamente -->
+        <option value="1">Para 1</option>
+        <option value="2" selected>Para 2</option>
+        <option value="3">Para 5</option>
+      </select>
+<div class="ingredientes-container">
+        <!-- Contenedor con ingredientes e imagen -->
+
+        <ul id="lista-ingredientes">
+          <!-- Lista que se actualiza dinámicamente según la cantidad de personas -->
+          <li>1 taza de harina</li>
+          <li>1 taza de leche</li>
+          <li>1 huevo</li>
+          <li>1 cucharada de aceite</li>
+          <li>1 pizca de sal</li>
+        </ul>
+
+        <img src="https://tiendaenlinea.supermercadoelexito.hn/web/image/product.template/37311/image_1024?unique=2bd13e8"
+             alt="Harina"
+             class="ingrediente-img"
+             title="Harina para panqueques">
+        <!-- Imagen ilustrativa de uno de los ingredientes -->
+</div>  
     </section>
   </main>
+
+<!-- SCRIPT DE JAVASCRIPT -->
+  <script>
+    // Función que ajusta la cantidad de ingredientes según la selección del usuario
+    function ajustarIngredientes() {
+      const personas = parseInt(document.getElementById("personas").value);
+      // Obtiene el número de personas desde el menú desplegable
+
+      const base = {
+        harina: 1,
+        leche: 1,
+        huevo: 1,
+        aceite: 1,
+        sal: 1
+      };
+      // Ingredientes base para 1 persona
+
+      // Genera el HTML con los ingredientes multiplicados según la cantidad de personas
+      document.getElementById("lista-ingredientes").innerHTML = `
+        <li>${base.harina * personas} taza(s) de harina</li>
+        <li>${base.leche * personas} taza(s) de leche</li>
+        <li>${base.huevo * personas} huevo(s)</li>
+        <li>${base.aceite * personas} cucharada(s) de aceite</li>
+        <li>${base.sal * personas} pizca(s) de sal</li>
+      `;
+    }
+  </script>
+    
   </body>
 </html>
