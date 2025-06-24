@@ -4,6 +4,7 @@
   padding: 0; /* Elimina el padding por defecto */
   box-sizing: border-box; /* Incluye padding y borde dentro del ancho y alto total del elemento */
 }
+
 /* Estilos generales para el cuerpo de la página */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente legible y moderna */
@@ -11,6 +12,7 @@ body {
   padding: 20px; /* Espacio interno alrededor del contenido */
   color: #333; /* Texto en gris oscuro para buena legibilidad */
 }
+
 /* Clase genérica para contener bloques con estilo uniforme */
 .box {
   margin: 20px auto; /* Margen superior/inferior y centrado horizontal */
@@ -20,6 +22,7 @@ body {
   border-radius: 10px; /* Esquinas redondeadas */
   background-color: white; /* Fondo blanco */
 }
+
 /* Cabecera del sitio */
 .header {
   display: flex; /* Usa modelo flexbox para disposición horizontal */
@@ -29,22 +32,26 @@ body {
   border-color: #ffb74d; /* Borde más oscuro en el mismo tono */
   flex-wrap: wrap; /* Permite que los elementos pasen a otra línea si no caben */
 }
+
 /* Logo de la cabecera */
 .logo {
   width: 50px; /* Ancho fijo */
   height: 50px; /* Alto fijo */
 }
+
 /* Título principal */
 h1 {
   flex-grow: 1; /* Ocupa todo el espacio disponible restante */
   font-size: 2rem; /* Tamaño grande */
   color: #bf360c; /* Color naranjo oscuro */
 }
+
 /* Navegación principal */
 .nav {
   width: 100%; /* Ocupar todo el ancho disponible */
   margin-top: 10px; /* Separación superior */
 }
+
 /* Estilos de los enlaces en la navegación */
 .nav a {
   text-decoration: none; /* Quita subrayado */
@@ -58,16 +65,19 @@ h1 {
   text-decoration: underline; /* Subrayado al pasar el mouse */
   color: #bf360c; /* Color más oscuro */
 }
+
 /* Sección para mostrar una imagen centrada */
 .image-section {
   text-align: center; /* Centra el contenido */
 }
+
 /* Imagen principal */
 .main-image {
   width: 100%; /* Ocupar todo el ancho disponible */
   height: auto; /* Ajustar altura proporcional */
   border-radius: 10px; /* Esquinas redondeadas */
 }
+
 /* Títulos secundarios dentro de una sección */
 .section h2 {
   margin-bottom: 10px; /* Espacio inferior */
@@ -99,6 +109,80 @@ h1 {
 .ingrediente-img:hover {
   transform: scale(1.05); /* Agranda la imagen ligeramente */
 }
+
+/* Sección de contacto con estilo personalizado */
+#contacto {
+  background-color: #fff3e0; /* Fondo suave y cálido */
+  border: 2px solid #ffcc80; /* Borde en tono similar */
+}
+
+/* Etiquetas de formulario */
+.form label {
+  display: block; /* Ocupa línea completa */
+  font-weight: bold; /* Negrita */
+  color: #5d4037; /* Marrón medio */
+  margin-top: 10px; /* Espacio hacia arriba */
+}
+
+/* Campos de texto, email y área de texto */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  background-color: #fce4ec; /* Fondo rosado claro */
+  border: 1px solid #f06292; /* Borde rosado más fuerte */
+  padding: 10px; /* Espaciado interior */
+  border-radius: 6px; /* Bordes redondeados */
+  color: #4e342e; /* Texto en marrón oscuro */
+}
+
+/* Botón de enviar */
+.form input[type="submit"] {
+  background-color: #ff9800; /* Naranja brillante */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Texto en negrita */
+  padding: 12px; /* Espacio interior */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  margin-top: 15px; /* Separación superior */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.form input[type="submit"]:hover {
+  background-color: #e65100; /* Naranja más oscuro */
+}
+
+/* Pie de página */
+.footer {
+  text-align: center; /* Centrado de texto */
+  background-color: #ffe0b2; /* Fondo similar al header */
+  font-style: italic; /* Estilo de letra cursiva */
+  border-color: #ffcc80; /* Color de borde */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .ingredientes-container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    align-items: flex-start; /* Alineación al inicio */
+  }
+
+  .header {
+    justify-content: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Espacio debajo del logo */
+  }
+
+  iframe {
+    width: 100%; /* Ajusta el ancho del iframe */
+    height: auto; /* Altura automática */
+  }
+}
+
 /* Sección de preparación */
 .preparacion-section {
   display: flex;
