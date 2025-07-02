@@ -6,35 +6,35 @@
   <title>Calculadora Azul</title>
 
   <style>
-    /* Estilo general del cuerpo de la página */
+    /* Estilo general de la página */
     body {
-      background-color: #e8f0fe; /* Fondo azul claro */
+      background-color: #e8f0fe;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Ocupa toda la altura de la ventana */
+      height: 100vh;
       margin: 0;
     }
 
     /* Contenedor principal de la calculadora */
     .calculadora {
-      background-color: #ffffff; /* Fondo blanco */
-      padding: 25px;
-      border-radius: 20px; /* Bordes redondeados */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-      max-width: 350px;
-      width: 100%;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      width: 320px;
     }
 
-    /* Título centrado y color principal */
     h2 {
       text-align: center;
-      color: #1a73e8; /* Azul Google */
+      color: #1a73e8;
       margin-bottom: 15px;
     }
 
-    /* Display donde se muestra la operación o el resultado */
+    /* Campo de entrada (display) */
     #display {
       width: 100%;
       height: 50px;
@@ -44,39 +44,51 @@
       margin-bottom: 15px;
       border: 2px solid #ccc;
       border-radius: 10px;
-      box-sizing: border-box;
       background-color: #f5f8fb;
+      box-sizing: border-box;
     }
 
-    /* Contenedor de cada fila de botones */
-    .fila {
+    /* Contenedor que agrupa números y operadores */
+    .contenedor-botones {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
     }
 
-    /* Estilo base para todos los botones */
-    .boton {
+    /* Números en formato de calculadora tradicional */
+    .numeros {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      flex: 3;
+    }
+
+    /* Operaciones vertical al lado derecho */
+    .operadores {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-left: 10px;
       flex: 1;
-      margin: 5px;
+    }
+
+    /* Estilo general de botones */
+    .boton {
       height: 55px;
       font-size: 1.2em;
       border: none;
       border-radius: 10px;
-      background-color: #dbe9ff; /* Azul suave */
+      background-color: #dbe9ff;
       color: #1a1a1a;
       transition: all 0.2s ease;
       cursor: pointer;
     }
 
-    /* Efecto hover para los botones */
     .boton:hover {
       background-color: #b5d3ff;
     }
 
-    /* Botones de operadores matemáticos */
+    /* Botones especiales */
     .boton-operador {
-      background-color: #1a73e8; /* Azul fuerte */
+      background-color: #1a73e8;
       color: white;
     }
 
@@ -84,9 +96,8 @@
       background-color: #155ac4;
     }
 
-    /* Botón de limpieza (C) */
     .boton-limpiar {
-      background-color: #e53935; /* Rojo */
+      background-color: #e53935;
       color: white;
     }
 
@@ -94,17 +105,9 @@
       background-color: #c62828;
     }
 
-    /* Botón de igual (=), ocupa toda la fila */
     .boton-igual {
-      background-color: #34a853; /* Verde */
+      background-color: #34a853;
       color: white;
-      width: 100%;
-      margin-top: 10px;
-      height: 55px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
     }
 
     .boton-igual:hover {
@@ -112,74 +115,66 @@
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Contenedor de la calculadora -->
+  <!-- Contenedor principal -->
   <div class="calculadora">
     <h2>Calculadora Azul</h2>
-
-    <!-- Campo donde se muestra la operación -->
     <input type="text" id="display" readonly />
 
-    <!-- Fila de botones: 7, 8, 9, ÷ -->
-    <div class="fila">
-      <button class="boton" onclick="agregarNumero('7')">7</button>
-      <button class="boton" onclick="agregarNumero('8')">8</button>
-      <button class="boton" onclick="agregarNumero('9')">9</button>
-      <button class="boton boton-operador" onclick="agregarNumero('/')">÷</button>
-    </div>
+    <!-- Contenedor con números a la izquierda y operaciones a la derecha -->
+    <div class="contenedor-botones">
+      
+      <!-- Números -->
+      <div class="numeros">
+        <button class="boton" onclick="agregarNumero('7')">7</button>
+        <button class="boton" onclick="agregarNumero('8')">8</button>
+        <button class="boton" onclick="agregarNumero('9')">9</button>
 
-    <!-- Fila de botones: 4, 5, 6, × -->
-    <div class="fila">
-      <button class="boton" onclick="agregarNumero('4')">4</button>
-      <button class="boton" onclick="agregarNumero('5')">5</button>
-      <button class="boton" onclick="agregarNumero('6')">6</button>
-      <button class="boton boton-operador" onclick="agregarNumero('*')">×</button>
-    </div>
+        <button class="boton" onclick="agregarNumero('4')">4</button>
+        <button class="boton" onclick="agregarNumero('5')">5</button>
+        <button class="boton" onclick="agregarNumero('6')">6</button>
 
-    <!-- Fila de botones: 1, 2, 3, − -->
-    <div class="fila">
-      <button class="boton" onclick="agregarNumero('1')">1</button>
-      <button class="boton" onclick="agregarNumero('2')">2</button>
-      <button class="boton" onclick="agregarNumero('3')">3</button>
-      <button class="boton boton-operador" onclick="agregarNumero('-')">−</button>
-    </div>
+        <button class="boton" onclick="agregarNumero('1')">1</button>
+        <button class="boton" onclick="agregarNumero('2')">2</button>
+        <button class="boton" onclick="agregarNumero('3')">3</button>
 
-    <!-- Fila de botones: 0, ., C, + -->
-    <div class="fila">
-      <button class="boton" onclick="agregarNumero('0')">0</button>
-      <button class="boton" onclick="agregarNumero('.')">.</button>
-      <button class="boton boton-limpiar" onclick="limpiar()">C</button>
-      <button class="boton boton-operador" onclick="agregarNumero('+')">+</button>
-    </div>
+        <!-- Cero ocupa 2 columnas -->
+        <button class="boton" style="grid-column: span 2;" onclick="agregarNumero('0')">0</button>
+        <button class="boton" onclick="agregarNumero('.')">.</button>
+      </div>
 
-    <!-- Botón de igual -->
-    <button class="boton-igual" onclick="calcular()">=</button>
+      <!-- Operaciones -->
+      <div class="operadores">
+        <button class="boton boton-operador" onclick="agregarNumero('+')">+</button>
+        <button class="boton boton-operador" onclick="agregarNumero('-')">−</button>
+        <button class="boton boton-operador" onclick="agregarNumero('*')">×</button>
+        <button class="boton boton-operador" onclick="agregarNumero('/')">÷</button>
+        <button class="boton boton-igual" onclick="calcular()">=</button>
+        <button class="boton boton-limpiar" onclick="limpiar()">C</button>
+      </div>
+    </div>
   </div>
 
-  <!-- Código JavaScript -->
+  <!-- Lógica de la calculadora -->
   <script>
     /**
-     * Agrega un número u operador al display.
-     * @param {string} num - Número u operador presionado.
+     * Agrega un número u operador al campo de texto.
+     * @param {string} num - El valor a agregar al display.
      */
     function agregarNumero(num) {
       document.getElementById('display').value += num;
     }
 
     /**
-     * Evalúa la operación matemática ingresada en el display.
-     * Muestra el resultado o un mensaje de error si la operación no es válida.
+     * Evalúa la operación matemática y muestra el resultado.
      */
     function calcular() {
       const display = document.getElementById('display');
       try {
-        // eval() evalúa la expresión como código JavaScript
-        display.value = eval(display.value);
+        display.value = eval(display.value); // Usa eval para procesar la operación
       } catch (error) {
-        // Si hay un error en la expresión, muestra "Error"
-        display.value = 'Error';
+        display.value = 'Error'; // Si hay un error, se muestra
       }
     }
 
