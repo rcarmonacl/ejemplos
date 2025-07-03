@@ -26,7 +26,7 @@ function calcular() {
 function guardarHistorial(entrada) {
   let historial = JSON.parse(localStorage.getItem("historial") || "[]");
   historial.unshift(entrada);
-  localStorage.setItem("historial", JSON.stringify(historial.slice(0, 5)));
+  localStorage.setItem("historial", JSON.stringify(historial.slice(0, 10)));
   mostrarHistorial();
 }
 function mostrarHistorial() {
